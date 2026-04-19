@@ -83,10 +83,10 @@ bool teachersignup::saveTeacher(const QString &name, const QString &id, const QS
 }
 
 
-// 선생 ID 중복 여부를 확인하는 함수
-// 1: 이미 존재하는 ID
-// 0: 중복 없음
-// -1: 파일을 열 수 없거나 현재 선생 정보가 없는 경우
+/* 선생 ID 중복 여부를 확인하는 함수
+    1: 이미 존재하는 ID
+    0: 중복 없음
+   -1: 파일을 열 수 없거나 현재 선생 정보가 없는 경우 */
 int teachersignup::isDuplicateId(const QString &id)
 {
     QFile file("teachers.txt");
