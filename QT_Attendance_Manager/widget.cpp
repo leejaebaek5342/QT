@@ -145,8 +145,8 @@ void Widget::on_loginbutton_clicked()
     return;
 }
 
-// 로그아웃하거나 다른 선생님으로 로그인할 때
-// 이전 선생님의 학생 목록, 조회 결과, 입력값이 남지 않도록 화면 상태를 초기화한다.
+/* 로그아웃하거나 다른 선생님으로 로그인할 때
+   이전 선생님의 학생 목록, 조회 결과, 입력값이 남지 않도록 화면 상태를 초기화한다. */
 void Widget::resetTeacherSessionData()
 {
     ui->TeacherName->clear();
@@ -191,10 +191,10 @@ QString Widget::selectedStudentId() const
     return ui->studentcombo->currentData().toString().trimmed();
 }
 
-// 학생 학번 중복 여부를 확인하는 함수
-// 1: 이미 존재하는 학번
-// 0: 중복 없음
-// -1: 파일을 열 수 없거나 현재 선생 정보가 없는 경우
+/*  학생 학번 중복 여부를 확인하는 함수
+    1: 이미 존재하는 학번
+    0: 중복 없음
+   -1: 파일을 열 수 없거나 현재 선생 정보가 없는 경우 */
 int Widget::isDuplicateStudentId(const QString &studentId)
 {
     if (currentTeacherId.isEmpty())
@@ -274,8 +274,8 @@ void Widget::on_regisbutton_clicked()
     loadStudentsToTable();
     loadStudentsToComboBox();
 }
-// 현재 로그인한 선생님의 학생 목록을 테이블에 불러오고,
-// 각 학생마다 출석 상태를 선택할 수 있는 콤보박스를 함께 만든다.
+/* 현재 로그인한 선생님의 학생 목록을 테이블에 불러오고,
+   각 학생마다 출석 상태를 선택할 수 있는 콤보박스를 함께 만든다. */
 void Widget::loadStudentsToTable()
 {
     if (currentTeacherId.isEmpty())
@@ -335,8 +335,8 @@ void Widget::loadStudentsToTable()
     file.close();
 }
 
-// 조회 화면에서 학생을 선택할 수 있도록 이름을 콤보박스에 채운다.
-// 화면에는 이름을 보여주고, 내부 데이터에는 학번을 함께 저장한다.
+/* 조회 화면에서 학생 목록을 콤보박스에 불러온다.
+   콤보박스에는 학생 이름을 표시하고, 각 항목의 내부 데이터로 학번을 함께 저장한다. */
 void Widget::loadStudentsToComboBox()
 {
     if (currentTeacherId.isEmpty())
@@ -379,11 +379,10 @@ void Widget::loadStudentsToComboBox()
     file.close();
 }
 
-// 선택한 날짜의 기존 기록은 제외하고 현재 테이블 상태를 다시 저장한다.
-// 출석 저장 결과를 확인하는 함수
-// 1: 저장 성공
-// -1: 현재 선생 정보가 없는 경우
-// -2: 파일을 열 수 없는 경우
+/* 선택한 날짜의 기존 기록은 제외하고 현재 테이블 상태를 다시 저장한다.
+    1: 저장 성공
+   -1: 현재 선생 정보가 없는 경우
+   -2: 파일을 열 수 없는 경우 */
 int Widget::saveAttendanceByDate()
 {
     if (currentTeacherId.isEmpty())
@@ -492,8 +491,8 @@ void Widget::on_viewbutton_clicked()
     ui->stackedWidget->setCurrentIndex(4);
 }
 
-// 현재 로그인한 선생님의 출석 파일에서
-// 선택한 학생의 이름과 학번이 모두 일치하는 기록만 조회해 출력한다.
+/* 현재 로그인한 선생님의 출석 파일에서
+   선택한 학생의 이름과 학번이 모두 일치하는 기록만 조회해 출력한다. */
 void Widget::loadStudentAttendanceforteach(const QString &studentName, const QString &studentId)
 {
     if (currentTeacherId.isEmpty())
@@ -545,12 +544,12 @@ void Widget::loadStudentAttendanceforteach(const QString &studentName, const QSt
         ui->viewTextEdit->setText("No attendance record found.");
     }
 }
-// 모든 선생님의 학생 목록 파일을 순회하면서
-// 입력한 이름과 학번이 실제로 존재하는지 확인한다.
-// 학생 정보 존재 여부를 확인하는 함수
-// 1: 이름과 학번이 일치하는 학생 정보가 존재함
-// 0: 일치하는 학생 정보가 없음
-// -1: teachers.txt 파일을 열 수 없는 경우
+/* 모든 선생님의 학생 목록 파일을 순회하면서
+   입력한 이름과 학번이 실제로 존재하는지 확인한다.
+   학생 정보 존재 여부를 확인하는 함수
+    1: 이름과 학번이 일치하는 학생 정보가 존재함
+    0: 일치하는 학생 정보가 없음
+   -1: teachers.txt 파일을 열 수 없는 경우 */
 int Widget::checkStudentInfo(const QString &name, const QString &id)
 {
     QFile teachersFile("teachers.txt");
@@ -609,8 +608,8 @@ int Widget::checkStudentInfo(const QString &name, const QString &id)
     return 0;
 }
 
-// Student 화면에서 이름과 학번을 기준으로
-// 모든 선생님의 출석 파일을 확인해 일치하는 기록을 화면에 출력한다.
+/* Student 화면에서 이름과 학번을 기준으로
+   모든 선생님의 출석 파일을 확인해 일치하는 기록을 화면에 출력한다. */
 void Widget::loadStudentAttendanceforst(const QString &name, const QString &id)
 {
     ui->viewTextEdit_2->clear();
