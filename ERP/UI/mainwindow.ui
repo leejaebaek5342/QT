@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>757</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>27</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>757</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1000</width>
+     <height>757</height>
+    </size>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="LoginPage">
+    <property name="styleSheet">
+     <string notr="true">#LoginPage {
+    background-color: #eef1f4;
+}</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1001</width>
+       <height>761</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>16</number>
+        </property>
+        <property name="leftMargin">
+         <number>36</number>
+        </property>
+        <property name="topMargin">
+         <number>30</number>
+        </property>
+        <property name="rightMargin">
+         <number>36</number>
+        </property>
+        <property name="bottomMargin">
+         <number>24</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="loginCard">
+          <property name="minimumSize">
+           <size>
+            <width>390</width>
+            <height>430</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>430</width>
+            <height>460</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame#loginCard {
+    background: #ffffff;
+    border: 1px solid #d6dbe0;
+    border-radius: 6px;
+}
+</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>431</width>
+             <height>457</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="spacing">
+             <number>16</number>
+            </property>
+            <property name="leftMargin">
+             <number>36</number>
+            </property>
+            <property name="topMargin">
+             <number>30</number>
+            </property>
+            <property name="rightMargin">
+             <number>36</number>
+            </property>
+            <property name="bottomMargin">
+             <number>24</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="../logo.qrc">:/og-image.jpg</pixmap>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="IDedit">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>48</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;
+border: 1px solid #aeb5bd;
+border-radius: 4px;
+padding-left: 12px;</string>
+              </property>
+              <property name="placeholderText">
+               <string>Username</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="PWedit">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>48</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;
+border: 1px solid #aeb5bd;
+border-radius: 4px;
+padding-left: 12px;</string>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::EchoMode::Password</enum>
+              </property>
+              <property name="placeholderText">
+               <string>Password</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="SigninButton">
+              <property name="styleSheet">
+               <string notr="true">background-color: #2f74d0;
+color: white;
+border: 1px solid #2f74d0;
+border-radius: 4px;
+padding: 8px;</string>
+              </property>
+              <property name="text">
+               <string>로그인</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="SignupButton">
+              <property name="styleSheet">
+               <string notr="true">background-color: #2f74d0;
+color: white;
+border: 1px solid #2f74d0;
+border-radius: 4px;
+padding: 8px;
+</string>
+              </property>
+              <property name="text">
+               <string>회원가입</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="CloseButton">
+              <property name="styleSheet">
+               <string notr="true">background-color: #2f74d0;
+color: white;
+border: 1px solid #2f74d0;
+border-radius: 4px;
+padding: 8px;
+</string>
+              </property>
+              <property name="text">
+               <string>닫기</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: #eef1f4;
+    color: #222222;
+    font-family: Arial;
+    font-size: 13px;
+}
+QFrame#summaryCard1, QFrame#summaryCard2, QFrame#summaryCard3, QFrame#summaryCard4,
+QFrame#inventoryCard, QFrame#logCard {
+    background-color: #ffffff;
+    border: 1px solid #d6dbe0;
+    border-radius: 6px;
+}
+QTableWidget {
+    background-color: #eef1f4;
+    gridline-color: #cfd5dc;
+    border: 1px solid #9fa7b0;
+    selection-background-color: #dcecff;
+    selection-color: #222222;
+}
+QTableWidget::viewport {
+    background-color: #eef1f4;
+}
+QHeaderView::section {
+    background-color: #f3f5f8;
+    border: 1px solid #cfd5dc;
+    color: #0070b8;
+    font-weight: bold;
+    padding: 6px;
+}
+QPushButton {
+    background-color: #f7f8fa;
+    color: #222222;
+    border: 1px solid #b8c0c8;
+    border-radius: 4px;
+    padding: 8px 22px;
+}</string>
+    </property>
+    <widget class="QFrame" name="sideBar">
+     <property name="geometry">
+      <rect>
+       <x>-5</x>
+       <y>0</y>
+       <width>95</width>
+       <height>757</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>95</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>95</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#sideBar { background: #f8fafc; border-right: 1px solid #d6dbe0; }
+QToolButton { background: transparent; border: 0; padding: 10px 4px; color: #586371; }
+QToolButton:checked { background: #e6eef8; color: #2f74d0; border-left: 3px solid #2f74d0; }</string>
+     </property>
+     <layout class="QVBoxLayout" name="sideBarLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QToolButton" name="btnMenu">
+        <property name="text">
+         <string>☰</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="btnDashboardMenu">
+        <property name="text">
+         <string>Dashboard</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="btnInventoryMenu">
+        <property name="text">
+         <string>Item manage</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="btnExport">
+        <property name="text">
+         <string>Export CSV</string>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="btnInOutMenu">
+        <property name="visible">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>In/Outbound</string>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="btnSettingsMenu">
+        <property name="visible">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Settings</string>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="sideBarSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CloseButton_2">
+        <property name="styleSheet">
+         <string notr="true">background-color: #5d6b7a;
+color: white;
+border: 1px solid #5d6b7a;
+border-radius: 4px;
+</string>
+        </property>
+        <property name="text">
+         <string>닫기</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="LogoutButton">
+        <property name="styleSheet">
+         <string notr="true">background-color: #5d6b7a;
+color: white;
+border: 1px solid #5d6b7a;
+border-radius: 4px;
+</string>
+        </property>
+        <property name="text">
+         <string>로그아웃</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="dashboardContent">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>0</y>
+       <width>910</width>
+       <height>779</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="dashboardContentLayout">
+      <property name="spacing">
+       <number>20</number>
+      </property>
+      <property name="leftMargin">
+       <number>28</number>
+      </property>
+      <property name="topMargin">
+       <number>12</number>
+      </property>
+      <property name="rightMargin">
+       <number>28</number>
+      </property>
+      <property name="bottomMargin">
+       <number>24</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="topBarLayout">
+        <item>
+         <widget class="QLabel" name="labelDashboardTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 24px; font-weight: bold; background: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Main dashboard</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="topBarSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelUser">
+          <property name="styleSheet">
+           <string notr="true">background: transparent; color: #68717c; font-size: 15px;</string>
+          </property>
+          <property name="text">
+           <string>관리자</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="summaryLayout">
+        <property name="spacing">
+         <number>16</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="summaryCard1">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="summaryCard1Layout">
+           <property name="leftMargin">
+            <number>14</number>
+           </property>
+           <property name="topMargin">
+            <number>12</number>
+           </property>
+           <property name="rightMargin">
+            <number>14</number>
+           </property>
+           <property name="bottomMargin">
+            <number>12</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="labelTotalTitle">
+             <property name="styleSheet">
+              <string notr="true">background-color: #eef1f4; font-size: 15px; font-weight: bold;</string>
+             </property>
+             <property name="text">
+              <string>총 물품재고량</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelTotalStock">
+             <property name="styleSheet">
+              <string notr="true">font-size: 26px; font-weight: bold; background: transparent;</string>
+             </property>
+             <property name="text">
+              <string>2,145</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="summaryCard3">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="summaryCard3Layout">
+           <property name="leftMargin">
+            <number>14</number>
+           </property>
+           <property name="topMargin">
+            <number>12</number>
+           </property>
+           <property name="rightMargin">
+            <number>14</number>
+           </property>
+           <property name="bottomMargin">
+            <number>12</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="labelInboundTitle">
+             <property name="styleSheet">
+              <string notr="true">background-color: #eef1f4; font-size: 15px; font-weight: bold;</string>
+             </property>
+             <property name="text">
+              <string>일일 입고량</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelInboundCount">
+             <property name="styleSheet">
+              <string notr="true">font-size: 26px; font-weight: bold; background: transparent;</string>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="summaryCard4">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="summaryCard4Layout">
+           <property name="leftMargin">
+            <number>14</number>
+           </property>
+           <property name="topMargin">
+            <number>12</number>
+           </property>
+           <property name="rightMargin">
+            <number>14</number>
+           </property>
+           <property name="bottomMargin">
+            <number>12</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="labelOutboundTitle">
+             <property name="styleSheet">
+              <string notr="true">background-color: #eef1f4; font-size: 15px; font-weight: bold;</string>
+             </property>
+             <property name="text">
+              <string>일일 출고량</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelOutboundCount">
+             <property name="styleSheet">
+              <string notr="true">font-size: 26px; font-weight: bold; background: transparent;</string>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QFrame" name="inventoryCard">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>330</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame#inventoryCard {
+    background: #ffffff;
+    border: 1px solid #d6dbe0;
+    border-radius: 6px;
+}
+</string>
+        </property>
+        <layout class="QVBoxLayout" name="inventoryCardLayout">
+         <property name="leftMargin">
+          <number>14</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>14</number>
+         </property>
+         <property name="bottomMargin">
+          <number>14</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="inventoryTitleLayout">
+           <item>
+            <widget class="QLabel" name="labelInventoryTitle">
+             <property name="styleSheet">
+              <string notr="true">font-size: 24px; font-weight: bold; background: transparent;</string>
+             </property>
+             <property name="text">
+              <string>창고별 재고현황</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="inventoryTitleSpacer">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnInbound">
+             <property name="minimumSize">
+              <size>
+               <width>62</width>
+               <height>36</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #0078d7;
+color: white;
+border: 1px solid #0078d7;
+border-radius: 4px;
+padding: 7px 20px;</string>
+             </property>
+             <property name="text">
+              <string>입고</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnOutbound">
+             <property name="minimumSize">
+              <size>
+               <width>62</width>
+               <height>36</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #5d6b7a;
+color: white;
+border: 1px solid #5d6b7a;
+border-radius: 4px;
+padding: 7px 20px;</string>
+             </property>
+             <property name="text">
+              <string>출고</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnAddBranch">
+             <property name="minimumSize">
+              <size>
+               <width>82</width>
+               <height>36</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #f7f8fa;
+color: #222222;
+border: 1px solid #b8c0c8;
+border-radius: 4px;
+padding: 7px 20px;</string>
+             </property>
+             <property name="text">
+              <string>지점 추가</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableInventory">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>260</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget,
+QTableWidget::viewport {
+    background-color: #eef1f4;
+}
+QTableWidget {
+    gridline-color: #cfd5dc;
+    border: 1px solid #9fa7b0;
+}</string>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>true</bool>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="logCard">
+        <property name="styleSheet">
+         <string notr="true">QFrame#logCard {
+    background: #ffffff;
+    border: 1px solid #d6dbe0;
+    border-radius: 6px;
+}
+</string>
+        </property>
+        <layout class="QVBoxLayout" name="logCardLayout">
+         <item>
+          <widget class="QLabel" name="labelLogTitle">
+           <property name="styleSheet">
+            <string notr="true">font-size: 16px; font-weight: bold; background: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Recent Activity</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableLog">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>170</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>220</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget,
+QTableWidget::viewport {
+    background-color: #eef1f4;
+}
+QTableWidget {
+    gridline-color: #cfd5dc;
+    border: 1px solid #9fa7b0;
+}</string>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>true</bool>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="itemManagePage">
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: #eef1f4;
+    color: #222222;
+    font-family: Arial;
+    font-size: 13px;
+}
+QFrame#itemManageCard, QFrame#itemEditCard, QFrame#itemDeleteCard {
+    background-color: #ffffff;
+    border: 1px solid #d6dbe0;
+    border-radius: 6px;
+}
+QTableWidget {
+    background-color: #eef1f4;
+    gridline-color: #cfd5dc;
+    border: 1px solid #9fa7b0;
+    selection-background-color: #dcecff;
+    selection-color: #222222;
+}
+QTableWidget::viewport {
+    background-color: #eef1f4;
+}
+QHeaderView::section {
+    background-color: #f3f5f8;
+    border: 1px solid #cfd5dc;
+    color: #0070b8;
+    font-weight: bold;
+    padding: 6px;
+}
+QLineEdit, QDateEdit, QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #aeb5bd;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+QPushButton {
+    background-color: #f7f8fa;
+    color: #222222;
+    border: 1px solid #b8c0c8;
+    border-radius: 4px;
+    padding: 8px 18px;
+}</string>
+    </property>
+    <widget class="QFrame" name="itemManageSideBar">
+     <property name="geometry">
+      <rect>
+       <x>-5</x>
+       <y>0</y>
+       <width>95</width>
+       <height>757</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#itemManageSideBar { background: #f8fafc; border-right: 1px solid #d6dbe0; }
+QToolButton { background: transparent; border: 0; padding: 10px 4px; color: #586371; }
+QToolButton:checked { background: #e6eef8; color: #2f74d0; border-left: 3px solid #2f74d0; }</string>
+     </property>
+     <layout class="QVBoxLayout" name="itemManageSideBarLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QToolButton" name="btnMenuItemPage">
+        <property name="text">
+         <string>☰</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="btnDashboardMenu_2">
+        <property name="text">
+         <string>Dashboard</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="btnInventoryMenu_2">
+        <property name="text">
+         <string>Item manage</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="btnExport_2">
+        <property name="text">
+         <string>Export CSV</string>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonStyle::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="itemManageSideBarSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CloseButton_3">
+        <property name="styleSheet">
+         <string notr="true">background-color: #5d6b7a;
+color: white;
+border: 1px solid #5d6b7a;
+border-radius: 4px;
+</string>
+        </property>
+        <property name="text">
+         <string>닫기</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="LogoutButton_2">
+        <property name="styleSheet">
+         <string notr="true">background-color: #5d6b7a;
+color: white;
+border: 1px solid #5d6b7a;
+border-radius: 4px;
+</string>
+        </property>
+        <property name="text">
+         <string>로그아웃</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="itemManageContent">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>0</y>
+       <width>910</width>
+       <height>757</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="itemManageContentLayout">
+      <property name="spacing">
+       <number>18</number>
+      </property>
+      <property name="leftMargin">
+       <number>28</number>
+      </property>
+      <property name="topMargin">
+       <number>18</number>
+      </property>
+      <property name="rightMargin">
+       <number>28</number>
+      </property>
+      <property name="bottomMargin">
+       <number>24</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="itemManageTopLayout">
+        <item>
+         <widget class="QLabel" name="labelItemManageTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 24px; font-weight: bold; background: transparent;</string>
+          </property>
+          <property name="text">
+           <string>Item manage</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="itemManageTopSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelUser_2">
+          <property name="styleSheet">
+           <string notr="true">background: transparent; color: #68717c; font-size: 15px;</string>
+          </property>
+          <property name="text">
+           <string>관리자</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QFrame" name="itemManageCard">
+        <layout class="QVBoxLayout" name="itemManageCardLayout">
+         <property name="leftMargin">
+          <number>14</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>14</number>
+         </property>
+         <property name="bottomMargin">
+          <number>14</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="labelSearchAreaTitle">
+           <property name="styleSheet">
+            <string notr="true">font-size: 16px; font-weight: bold; background: transparent;</string>
+           </property>
+           <property name="text">
+            <string>검색 조건</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="searchConditionLayout">
+           <property name="horizontalSpacing">
+            <number>12</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>10</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="labelSearchDate">
+             <property name="text">
+              <string>날짜</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QDateEdit" name="dateSearch">
+             <property name="dateTime">
+              <datetime>
+               <hour>0</hour>
+               <minute>0</minute>
+               <second>0</second>
+               <year>2025</year>
+               <month>12</month>
+               <day>25</day>
+              </datetime>
+             </property>
+             <property name="displayFormat">
+              <string>yyyy-MM-dd</string>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="labelSearchItem">
+             <property name="text">
+              <string>품목</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLineEdit" name="editSearchItem">
+             <property name="placeholderText">
+              <string>품목코드 또는 품목명</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLabel" name="labelSearchLogType">
+             <property name="text">
+              <string>로그</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QComboBox" name="comboLogType">
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>34</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>전체</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>입고</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>출고</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>삭제</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="6">
+            <widget class="QPushButton" name="btnSearchExecute">
+             <property name="minimumSize">
+              <size>
+               <width>92</width>
+               <height>34</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>검색 실행</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="7">
+            <widget class="QPushButton" name="btnResetSearch">
+             <property name="minimumSize">
+              <size>
+               <width>92</width>
+               <height>34</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>초기화</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableItemManageResult">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>260</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget,
+QTableWidget::viewport {
+    background-color: #eef1f4;
+}
+QTableWidget {
+    gridline-color: #cfd5dc;
+    border: 1px solid #9fa7b0;
+}</string>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>true</bool>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectionBehavior::SelectItems</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="itemManageBottomLayout">
+        <property name="spacing">
+         <number>18</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="itemEditCard">
+          <layout class="QGridLayout" name="itemEditLayout">
+           <property name="leftMargin">
+            <number>14</number>
+           </property>
+           <property name="topMargin">
+            <number>12</number>
+           </property>
+           <property name="rightMargin">
+            <number>14</number>
+           </property>
+           <property name="bottomMargin">
+            <number>14</number>
+           </property>
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item row="2" column="3">
+            <widget class="QPushButton" name="btnSaveEdit">
+             <property name="minimumSize">
+              <size>
+               <width>88</width>
+               <height>34</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #0078d7;
+color: white;
+border: 1px solid #0078d7;
+border-radius: 4px;</string>
+             </property>
+             <property name="text">
+              <string>Save</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="4">
+            <widget class="QLabel" name="labelEditTitle">
+             <property name="styleSheet">
+              <string notr="true">font-size: 16px; font-weight: bold; background: transparent;</string>
+             </property>
+             <property name="text">
+              <string>선택 셀 수정</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="labelSelectedColumn">
+             <property name="frameShape">
+              <enum>QFrame::Shape::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Plain</enum>
+             </property>
+             <property name="text">
+              <string>선택 컬럼</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="labelCurrentValue">
+             <property name="text">
+              <string>현재값</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="labelNewValue">
+             <property name="text">
+              <string>수정값</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLineEdit" name="editCurrentValue">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QLineEdit" name="editNewValue">
+             <property name="placeholderText">
+              <string>선택한 셀에 저장할 값</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="editSelectedColumn">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="itemDeleteCard">
+          <property name="maximumSize">
+           <size>
+            <width>260</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="itemDeleteLayout">
+           <property name="leftMargin">
+            <number>14</number>
+           </property>
+           <property name="topMargin">
+            <number>12</number>
+           </property>
+           <property name="rightMargin">
+            <number>14</number>
+           </property>
+           <property name="bottomMargin">
+            <number>14</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="labelDeleteTitle">
+             <property name="styleSheet">
+              <string notr="true">font-size: 16px; font-weight: bold; background: transparent;</string>
+             </property>
+             <property name="text">
+              <string>삭제</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelDeleteHelp">
+             <property name="text">
+              <string>테이블에서 선택한 셀을 기준으로 삭제합니다.</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="deleteCardSpacer">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnDeleteSelectedCell">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>36</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #5d6b7a;
+color: white;
+border: 1px solid #5d6b7a;
+border-radius: 4px;</string>
+             </property>
+             <property name="text">
+              <string>선택 셀 삭제</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../logo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

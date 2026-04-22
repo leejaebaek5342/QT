@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>og-image.jpg</file>
+        <file>og-image_tmp.jpg</file>
+    </qresource>
+</RCC>
